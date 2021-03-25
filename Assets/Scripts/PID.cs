@@ -64,6 +64,13 @@ public class PID
 		_kd = d;
     }
 
+	/// <summary>
+	/// Based on the code from Brian-Stone on the Unity forums
+	/// https://forum.unity.com/threads/rigidbody-lookat-torque.146625/#post-1005645
+	/// </summary>
+	/// <param name="currentError"></param>
+	/// <param name="deltaTime"></param>
+	/// <returns></returns>
 	public float GetOutput(float currentError, float deltaTime)
 	{
 		_p = currentError;
